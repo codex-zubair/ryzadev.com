@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies | Ryza Dev</title>
+  <meta name="description" content="Selected work and case studies from Ryza Dev — VPN clients, AI trading systems, offline utilities, AI-powered mobile apps, full-stack web platforms and applied R&D." />
+  <meta name="keywords" content="Ryza Dev case studies, VPN app, AI trading bot, NetCarve, AniEye, AI mobile apps, web platforms" />
+  <meta name="theme-color" content="#0b0e14" />
+  <meta name="author" content="Ryza Dev" />
+  <meta property="og:title" content="Case Studies | Ryza Dev" />
+  <meta property="og:description" content="Real products we designed, built and shipped — across mobile, AI, web and R&D." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ryzadev.com/work.html" />
+  <link rel="canonical" href="https://ryzadev.com/work.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236c5ce7'/><text x='50' y='72' font-size='64' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>R</text></svg>" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Ryza Dev home">
+        <span class="brand-mark">R</span>
+        <span class="brand-text">Ryza<span class="accent">Dev</span></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#team">Team</a>
+        <a href="index.html#work">Our Apps</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="work.html">Case Studies</a>
+        <a href="index.html#why">Why Us</a>
+        <a href="index.html#contact" class="nav-cta">Hire Us</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero-sub">
+      <div class="container hero-inner">
+        <p class="eyebrow">Case Studies</p>
+        <h1>Work we&rsquo;ve <span class="accent">shipped.</span></h1>
+        <p class="lead">
+          Real products — designed, engineered and released by the Ryza Dev team. Each one
+          taken from idea to a running, supported product.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="index.html#contact">Start a Project</a>
+          <a class="btn btn-ghost" href="index.html#work">See published apps</a>
+        </div>
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <article class="case reveal">
+          <div class="case-head">
+            <span class="tag">Product · Security · Featured</span>
+            <h2>Zerova / Zystra VPN</h2>
+          </div>
+          <div class="case-grid">
+            <div class="spec"><span>Stack</span><strong>Flutter · Dart · Kotlin · WireGuard</strong></div>
+            <div class="spec"><span>Platforms</span><strong>Android (Google Play)</strong></div>
+            <div class="spec"><span>Type</span><strong>VPN client · rebrand lifecycle</strong></div>
+            <div class="spec"><span>Role</span><strong>Mobile engineering · publishing</strong></div>
+          </div>
+          <p>
+            A cross-platform VPN client built on a WireGuard core, with native tunnel management,
+            multi-region server selection, and a complete privacy and rebrand lifecycle — designed,
+            built, signed and shipped to Google Play.
+          </p>
+          <h3>The problem</h3>
+          <p>
+            The client needed a real VPN — not a wrapper around a third-party SDK, but a proper tunnel
+            with native service integration, reliable connection state and store-compliant privacy
+            handling. It also had to survive a full rebrand from <strong>Zerova</strong> to
+            <strong>Zystra</strong> without breaking existing installs.
+          </p>
+          <h3>What we built</h3>
+          <ul>
+            <li>Native Android tunnel via <code>VpnService</code> with the WireGuard core, Flutter UI as a thin state reflector.</li>
+            <li>Full connection lifecycle — connect, disconnect, reconnect-on-network-change and a foreground notification.</li>
+            <li>Multi-region server selection with latency-aware defaults.</li>
+            <li>VPN service declaration, data-safety form and privacy policy written to match real behaviour.</li>
+            <li>Signing-key continuity preserved through the rebrand so Play treated the new identity as an update.</li>
+          </ul>
+          <h3>Outcome</h3>
+          <p>
+            A production VPN client delivered through the full store lifecycle, including VPN
+            declaration, data-safety compliance and a rebrand handled without losing update continuity.
+          </p>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-head">
+            <span class="tag">Automation · Finance</span>
+            <h2>AI Trading Bot</h2>
+          </div>
+          <div class="case-grid">
+            <div class="spec"><span>Stack</span><strong>Python · MQL5 · Pine Script · CDP</strong></div>
+            <div class="spec"><span>Platforms</span><strong>MetaTrader · Web dashboards</strong></div>
+            <div class="spec"><span>Type</span><strong>Autonomous research system</strong></div>
+            <div class="spec"><span>Role</span><strong>Systems &amp; ML engineering</strong></div>
+          </div>
+          <p>
+            A self-improving trading research system that records market data, learns a direction
+            model, validates it honestly, and only trades horizons that pass a statistical edge
+            test — with a live console read-out and layered risk controls.
+          </p>
+          <h3>The problem</h3>
+          <p>
+            Manual trading is inconsistent and emotional. The goal was a system that executes a
+            defined strategy identically every time, tracks performance in real time, and limits
+            downside automatically.
+          </p>
+          <h3>What we built</h3>
+          <ul>
+            <li>Separated <strong>strategy</strong> (Python models) from <strong>execution</strong> (MQL5) so signal logic could evolve independently.</li>
+            <li>A purged walk-forward validation gate that decides which horizons are tradeable.</li>
+            <li>Risk controls: position sizing, maximum drawdown, daily loss caps and hard stop-losses.</li>
+            <li>A live dashboard for PnL, open positions and strategy health, plus Pine Script indicators for chart validation.</li>
+            <li>Full decision logging so strategy changes can be evaluated against real outcomes.</li>
+          </ul>
+          <h3>Outcome</h3>
+          <p>
+            A disciplined execution engine that runs the strategy consistently, with the risk layer
+            enforcing limits no matter what the market does. Built and validated on a demo account.
+          </p>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-head">
+            <span class="tag">Utility · Open Source</span>
+            <h2>NetCarve — Subnet &amp; CIDR Calculator</h2>
+          </div>
+          <div class="case-grid">
+            <div class="spec"><span>Stack</span><strong>Kotlin · Android</strong></div>
+            <div class="spec"><span>Platforms</span><strong>Android</strong></div>
+            <div class="spec"><span>Type</span><strong>Offline networking utility</strong></div>
+            <div class="spec"><span>Role</span><strong>Design · engineering · release</strong></div>
+          </div>
+          <p>
+            A free, ad-free, fully offline networking utility for network engineers, cloud architects
+            and DevOps teams. NetCarve performs precise IPv4/IPv6 subnet math and VLSM planning
+            entirely on-device using integer binary arithmetic.
+          </p>
+          <h3>The problem</h3>
+          <p>
+            Network engineers often work in air-gapped or restricted data centres where network
+            access is unavailable — and most subnet calculators phone home, carry ads or track users.
+          </p>
+          <h3>What we built</h3>
+          <ul>
+            <li>Exact subnet math derived from integer bit operations — correct for every prefix length.</li>
+            <li>Requests <strong>no internet permission</strong>, contains no ads and no trackers.</li>
+            <li>VLSM planning and a binary bit view with copy-to-clipboard on every value.</li>
+            <li>Engineer-first UI with instant results, shipping under the MIT license as an open-source showcase.</li>
+          </ul>
+          <h3>Outcome</h3>
+          <p>
+            A genuinely private, offline-by-design tool trusted by engineers — and a public showcase
+            of production-grade native software.
+          </p>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-head">
+            <span class="tag">Reference · Mobile</span>
+            <h2>AniEye — Offline Watch-Order Guide</h2>
+          </div>
+          <div class="case-grid">
+            <div class="spec"><span>Stack</span><strong>Kotlin · Android</strong></div>
+            <div class="spec"><span>Platforms</span><strong>Android (min SDK 24)</strong></div>
+            <div class="spec"><span>Type</span><strong>Single-purpose reference app</strong></div>
+            <div class="spec"><span>Role</span><strong>Product · engineering · release</strong></div>
+          </div>
+          <p>
+            A fully offline anime watch-order guide: pick a series and see its recommended viewing
+            order — seasons, arcs, films and optional entries, numbered step by step.
+          </p>
+          <h3>The problem</h3>
+          <p>
+            Fans constantly ask "which order should I watch this in?" but existing answers are buried
+            in forums and wiki pages that require connectivity and are cluttered with ads.
+          </p>
+          <h3>What we built</h3>
+          <ul>
+            <li>14 popular series with step-by-step watch orders and 89 numbered steps.</li>
+            <li>Optional steps (films/OVAs/spinoffs) clearly flagged, plus instant search by name.</li>
+            <li>Zero permissions, no internet permission, no ads, no analytics, no stored data.</li>
+          </ul>
+          <h3>Outcome</h3>
+          <p>
+            A fast, private, ad-free reference app that works entirely offline — a clean example of
+            shipping a focused product well.
+          </p>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-head">
+            <span class="tag">AI · Mobile</span>
+            <h2>AI-Powered Mobile Apps</h2>
+          </div>
+          <div class="case-grid">
+            <div class="spec"><span>Stack</span><strong>OpenAI · Gemini · Flutter · Kotlin</strong></div>
+            <div class="spec"><span>Platforms</span><strong>Android &amp; iOS</strong></div>
+            <div class="spec"><span>Type</span><strong>AI product development</strong></div>
+            <div class="spec"><span>Role</span><strong>AI + mobile engineering</strong></div>
+          </div>
+          <p>
+            Android and cross-platform apps with integrated LLM features — conversational chatbots,
+            image understanding, voice interaction and smart recommendations — built for real users
+            rather than demos.
+          </p>
+          <h3>The problem</h3>
+          <p>
+            Clients wanted genuine AI capabilities without the fragility that comes from calling a
+            model directly from UI code. AI calls fail, latency varies, and costs need watching.
+          </p>
+          <h3>What we built</h3>
+          <ul>
+            <li>All model access wrapped behind a single AI service seam that owns prompts, retries, caching and fallbacks.</li>
+            <li>Streaming responses so users see progress immediately.</li>
+            <li>Graceful non-AI fallbacks so apps stay usable when the model is unavailable.</li>
+            <li>On-device classification for cheap tasks, cloud models only where needed — cutting cost and latency.</li>
+            <li>Instrumentation of the AI path: success rate, latency and fallback frequency.</li>
+          </ul>
+          <h3>Outcome</h3>
+          <p>
+            AI features that behave predictably in production — responsive under load, resilient to
+            outages and cost-controlled through hybrid routing.
+          </p>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-head">
+            <span class="tag">Full-Stack · Web</span>
+            <h2>Full-Stack Web Platforms</h2>
+          </div>
+          <div class="case-grid">
+            <div class="spec"><span>Stack</span><strong>React · Next.js · NestJS · TypeScript</strong></div>
+            <div class="spec"><span>Data</span><strong>Postgres · MongoDB · Redis</strong></div>
+            <div class="spec"><span>Type</span><strong>Web products</strong></div>
+            <div class="spec"><span>Role</span><strong>Full-stack engineering</strong></div>
+          </div>
+          <p>
+            Full-stack products with React/Next.js front-ends, NestJS/Node and TypeScript backends,
+            and live deployment — built for real users with auth, data and payments.
+          </p>
+          <h3>The problem</h3>
+          <p>
+            Clients needed more than a landing page: real applications with authenticated users,
+            persistent data, integrations and the reliability of a production deployment.
+          </p>
+          <h3>What we built</h3>
+          <ul>
+            <li>Next.js/React front-ends with responsive, accessible UI and sensible SEO defaults.</li>
+            <li>NestJS/Express and TypeScript APIs with typed contracts shared across the stack.</li>
+            <li>Postgres/MongoDB persistence with migrations and Redis for caching and queues.</li>
+            <li>Auth, role-based access and payment integrations where required.</li>
+            <li>Containerised deployment with CI/CD and environment-based configuration.</li>
+          </ul>
+          <h3>Outcome</h3>
+          <p>
+            Deployed platforms that handle real traffic, with clean separation between front-end, API
+            and data layers so features ship without regressions.
+          </p>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-head">
+            <span class="tag">R&amp;D · Autonomous</span>
+            <h2>Defense Research &amp; Development</h2>
+          </div>
+          <div class="case-grid">
+            <div class="spec"><span>Focus</span><strong>Simulation · signal processing · autonomy</strong></div>
+            <div class="spec"><span>Domain</span><strong>Defense R&amp;D</strong></div>
+            <div class="spec"><span>Type</span><strong>Applied research</strong></div>
+            <div class="spec"><span>Role</span><strong>Engineering contributor</strong></div>
+          </div>
+          <p>
+            Our team contributes engineering to a national defense research and development project
+            spanning simulation, signal processing and autonomous systems. Due to the sensitive
+            nature of the work, specific implementation details are not published.
+          </p>
+          <h3>Areas of contribution</h3>
+          <ul>
+            <li>Simulation of dynamic systems and evaluation of control strategies.</li>
+            <li>Signal processing and radio tooling, including SDR-based experimentation.</li>
+            <li>Autonomous-system behaviours — sensing, path planning and control.</li>
+            <li>Applied research support and technical documentation.</li>
+          </ul>
+          <h3>Why it matters</h3>
+          <p>
+            This R&amp;D sharpens the same skills we bring to client products: rigorous simulation before
+            shipping, signal and data processing, and autonomy that behaves predictably under uncertainty.
+          </p>
+        </article>
+
+        <article class="case reveal">
+          <div class="case-head">
+            <span class="tag">Embedded · Systems</span>
+            <h2>Embedded &amp; Firmware</h2>
+          </div>
+          <div class="case-grid">
+            <div class="spec"><span>Stack</span><strong>ESP32 · PlatformIO · Embedded C/C++</strong></div>
+            <div class="spec"><span>Focus</span><strong>Sensors · telemetry · radio</strong></div>
+            <div class="spec"><span>Type</span><strong>Embedded systems</strong></div>
+            <div class="spec"><span>Role</span><strong>Firmware engineering</strong></div>
+          </div>
+          <p>
+            ESP32 and microcontroller firmware, sensor and telemetry integration, SDR and radio
+            tooling — applied across client prototypes and research experiments.
+          </p>
+          <h3>What we build</h3>
+          <ul>
+            <li>ESP32/Arduino firmware with PlatformIO toolchains.</li>
+            <li>Sensor drivers, telemetry pipelines and hardware integration.</li>
+            <li>SDR and radio signal tooling for experimentation.</li>
+            <li>Bridging embedded devices to cloud and mobile apps over Wi-Fi/BLE.</li>
+          </ul>
+          <h3>Outcome</h3>
+          <p>
+            Reliable device firmware that connects the physical world to the software products we build.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container narrow" style="text-align:center;">
+        <header class="section-head" style="margin-inline:auto;">
+          <h2>Have a project in mind?</h2>
+          <p>Tell us what you want to build — we usually reply within 24 hours.</p>
+        </header>
+        <div class="contact-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="mailto:im.nmzar@gmail.com?subject=Project%20Inquiry%20-%20Ryza%20Dev">Email Us</a>
+          <a class="btn btn-ghost" href="https://wa.me/15618652213" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">R</span>
+        <div>
+          <strong>Ryza Dev</strong>
+          <p>Android • AI • Web • Cloud • R&amp;D</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:im.nmzar@gmail.com">im.nmzar@gmail.com</a>
+        <a href="tel:+8801622559988">+880 1622 559988</a>
+        <a href="https://wa.me/15618652213" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://play.google.com/store/apps/dev?id=8647717003238158578" target="_blank" rel="noopener">Google Play</a>
+        <a href="https://codexzubair.com" target="_blank" rel="noopener">codexzubair.com</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>© <span id="year"></span> Ryza Dev. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

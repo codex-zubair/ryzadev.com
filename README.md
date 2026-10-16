@@ -8,11 +8,22 @@ Live domain: **https://ryzadev.com**
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The one page (hero, services, apps, why, about, contact) |
+| `index.html` | Homepage (hero, services, capabilities, team, published apps, selected work, why, about, contact) |
+| `work.html` | Case studies — detailed write-ups of shipped projects |
 | `styles.css` | Dark theme + responsive layout |
 | `apps.js` | Published apps data (rendered automatically) |
 | `script.js` | Renders apps, mobile nav, scroll animations |
 | `CNAME` | Custom domain for GitHub Pages |
+
+## Contact details
+
+- Email: `im.nmzar@gmail.com`
+- Phone: `+880 1622 559988`
+- WhatsApp: `+1 561 865 2213`
+
+## Team
+
+Led by founder **Zubair Alam (codex-zubair)** — portfolio at [codexzubair.com](https://codexzubair.com) — supported by specialists in mobile, AI, web, cloud, design and QA/release.
 
 ## Adding a new published app
 
