@@ -18,6 +18,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%236c5ce7'/><text x='50' y='72' font-size='64' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>R</text></svg>" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ryza Dev",
+    "description": "Android, AI and web development studio with specialist talent across mobile, AI, cloud, design and applied R&D.",
+    "url": "https://ryzadev.com",
+    "email": "im.nmzar@gmail.com",
+    "telephone": "+8801622559988",
+    "founder": { "@type": "Person", "name": "Zubair Alam", "alternateName": "codex-zubair", "url": "https://codexzubair.com" },
+    "areaServed": "Worldwide",
+    "priceRange": "$$",
+    "sameAs": [
+      "https://codexzubair.com",
+      "https://github.com/codex-zubair",
+      "https://play.google.com/store/apps/dev?id=8647717003238158578"
+    ],
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Android & iOS App Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI App Development & Integration" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full-Stack Web Development" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Play & App Store Publishing" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cloud, DevOps & Automation" } }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How long does an app take to build?", "acceptedAnswer": { "@type": "Answer", "text": "A focused app typically takes 2-6 weeks depending on scope. We share a clear milestone plan before we start and give weekly progress updates." } },
+      { "@type": "Question", "name": "Do I own the source code?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You own the complete source code and all assets on delivery. We hand over the repository and documentation." } },
+      { "@type": "Question", "name": "Can you publish the app on my accounts?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We publish to Google Play and the Apple App Store on your developer accounts, and handle store listings, compliance and review." } },
+      { "@type": "Question", "name": "Do you offer support after launch?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We offer post-launch support and maintenance so your product keeps working as platforms and dependencies change." } }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -30,12 +68,12 @@
       </a>
       <nav class="nav" id="nav" aria-label="Primary">
         <a href="#services">Services</a>
+        <a href="#process">Process</a>
         <a href="#team">Team</a>
         <a href="#work">Our Apps</a>
-        <a href="#pricing">Pricing</a>
         <a href="work.html">Case Studies</a>
-        <a href="#why">Why Us</a>
-        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact" class="nav-cta">Hire Us</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -230,8 +268,50 @@
       </div>
     </section>
 
+    <!-- ================= PROCESS ================= -->
+    <section id="process" class="section">
+      <div class="container">
+        <header class="section-head">
+          <h2>How we work</h2>
+          <p>A clear, milestone-driven process — no surprises, no scope creep.</p>
+        </header>
+        <ol class="process-grid">
+          <li class="process-step">
+            <span class="process-num">01</span>
+            <h3>Discovery &amp; scope</h3>
+            <p>We clarify the goal, define one testable outcome, and agree on features, timeline and budget.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-num">02</span>
+            <h3>Design &amp; architecture</h3>
+            <p>Wireframes, UI direction and the technical plan — data model, stack and integrations.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-num">03</span>
+            <h3>Build in milestones</h3>
+            <p>Weekly updates and testable builds. You see real progress, not a black box.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-num">04</span>
+            <h3>Test &amp; polish</h3>
+            <p>QA across devices, performance, edge cases and store compliance before release.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-num">05</span>
+            <h3>Publish &amp; launch</h3>
+            <p>We handle signing, store listings, data-safety and review — and get you live.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-num">06</span>
+            <h3>Support &amp; grow</h3>
+            <p>Post-launch maintenance, analytics and feature iterations as your product scales.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
     <!-- ================= TEAM ================= -->
-    <section id="team" class="section">
+    <section id="team" class="section section-alt">
       <div class="container">
         <header class="section-head">
           <h2>Our talent</h2>
@@ -295,7 +375,7 @@
     </section>
 
     <!-- ================= PUBLISHED APPS ================= -->
-    <section id="work" class="section section-alt">
+    <section id="work" class="section">
       <div class="container">
         <header class="section-head">
           <h2>Apps we&rsquo;ve published</h2>
@@ -311,7 +391,7 @@
     </section>
 
     <!-- ================= FEATURED WORK ================= -->
-    <section id="projects" class="section">
+    <section id="projects" class="section section-alt">
       <div class="container">
         <header class="section-head">
           <h2>Selected work</h2>
@@ -542,8 +622,44 @@
       </div>
     </section>
 
+    <!-- ================= FAQ ================= -->
+    <section id="faq" class="section section-alt">
+      <div class="container narrow">
+        <header class="section-head">
+          <h2>Frequently asked questions</h2>
+          <p>Straight answers to what clients ask most.</p>
+        </header>
+        <div class="faq-list">
+          <details class="faq" open>
+            <summary>How long does an app take to build?</summary>
+            <p>A focused app typically takes 2–6 weeks depending on scope. We share a clear milestone plan before we start and send weekly progress updates.</p>
+          </details>
+          <details class="faq">
+            <summary>Do I own the source code?</summary>
+            <p>Yes — you own the complete source code and all assets on delivery. We hand over the repository and documentation.</p>
+          </details>
+          <details class="faq">
+            <summary>Can you publish on my accounts?</summary>
+            <p>Yes. We publish to Google Play and the Apple App Store on your developer accounts and handle store listings, compliance and review.</p>
+          </details>
+          <details class="faq">
+            <summary>What does it cost?</summary>
+            <p>Fixed packages start from $25 for publishing and $95–$120 for app builds. Larger or custom work gets a scoped quote — see <a href="#pricing">Services &amp; pricing</a>.</p>
+          </details>
+          <details class="faq">
+            <summary>Do you offer support after launch?</summary>
+            <p>Yes. We offer post-launch support and maintenance so your product keeps working as platforms and dependencies change.</p>
+          </details>
+          <details class="faq">
+            <summary>How do we communicate and get updates?</summary>
+            <p>Over email, WhatsApp or your preferred channel — whichever is fastest for you. You'll get regular updates and can see working builds as we go.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- ================= CONTACT ================= -->
-    <section id="contact" class="section section-alt">
+    <section id="contact" class="section">
       <div class="container narrow">
         <header class="section-head">
           <h2>Let&rsquo;s build something</h2>

@@ -8,12 +8,15 @@ Live domain: **https://ryzadev.com**
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Homepage (hero, services, capabilities, team, published apps, selected work, why, about, contact) |
+| `index.html` | Homepage (hero, services, capabilities, process, team, published apps, selected work, pricing, why, about, FAQ, contact) |
 | `work.html` | Case studies — detailed write-ups of shipped projects |
 | `styles.css` | Dark theme + responsive layout |
 | `apps.js` | Published apps data (rendered automatically) |
 | `script.js` | Renders apps, mobile nav, scroll animations |
+| `sitemap.xml` / `robots.txt` | SEO — sitemap and crawler rules |
 | `CNAME` | Custom domain for GitHub Pages |
+
+The homepage also includes `ProfessionalService` and `FAQPage` JSON-LD structured data for search engines.
 
 ## Contact details
 
