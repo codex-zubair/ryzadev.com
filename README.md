@@ -8,8 +8,10 @@ Live domain: **https://ryzadev.com**
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Homepage (hero, services, capabilities, process, team, published apps, selected work, pricing, why, certifications, about, FAQ, contact) |
+| `index.html` | Homepage (hero, services, capabilities, process, team, published apps, selected work, pricing, why, testimonials, certifications, about, FAQ, contact) |
 | `work.html` | Case studies — detailed write-ups of shipped projects |
+| `services/*.html` | SEO service landing pages (Android, Flutter, AI, web, publishing, VPN, automation) |
+| `blog/` | Blog — listing + posts (blog.css, BlogPosting schema) |
 | `styles.css` | Dark theme + responsive layout |
 | `apps.js` | Published apps data (rendered automatically) |
 | `script.js` | Renders apps, mobile nav, scroll animations |
