@@ -284,6 +284,21 @@ img { max-width: 100%; display: block; }
   font-size: 0.72rem; font-weight: 800;
 }
 
+/* ---------- Certifications / trust ---------- */
+.cert-band { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.cert {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px 18px; transition: transform .22s ease, border-color .22s ease, background .22s ease;
+}
+.cert:hover { transform: translateY(-4px); border-color: rgba(43, 130, 247, 0.5); background: var(--card-hover); }
+.cert-ico {
+  display: grid; place-items: center; flex: none; width: 42px; height: 42px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #fff; font-weight: 800; font-size: 1rem;
+}
+.cert h3 { font-size: 0.98rem; font-weight: 700; margin-bottom: 3px; }
+.cert span { font-size: 0.82rem; color: var(--muted); }
+
 /* ---------- About ---------- */
 .about-text { color: var(--muted); font-size: 1.02rem; margin-bottom: 18px; }
 
@@ -357,6 +372,7 @@ img { max-width: 100%; display: block; }
   .apps-grid { grid-template-columns: repeat(3, 1fr); }
   .cap-grid { grid-template-columns: repeat(2, 1fr); }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .cert-band { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 760px) {
   .nav {
@@ -381,7 +397,7 @@ img { max-width: 100%; display: block; }
   .case-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 460px) {
-  .grid-3, .grid-4, .apps-grid, .cap-grid, .price-grid, .process-grid { grid-template-columns: 1fr; }
+  .grid-3, .grid-4, .apps-grid, .cap-grid, .price-grid, .process-grid, .cert-band { grid-template-columns: 1fr; }
   .hero { padding: 72px 0 60px; }
   .section { padding: 64px 0; }
 }
