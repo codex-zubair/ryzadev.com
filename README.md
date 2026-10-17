@@ -29,7 +29,7 @@ The homepage also includes `ProfessionalService` (with credentials) and `FAQPage
 
 ## Team
 
-Led by founder **Zubair Alam (codex-zubair)** — portfolio at [codexzubair.com](https://codexzubair.com) — supported by specialists in mobile, AI, web, cloud, design and QA/release.
+Led by founder **Zubair (codex-zubair)** — portfolio at [codexzubair.com](https://codexzubair.com) — supported by specialists in mobile, AI, web, cloud, design and QA/release.
 
 ## Adding a new published app
 
