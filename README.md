@@ -15,6 +15,7 @@ Live domain: **https://ryzadev.com**
 | `script.js` | Renders apps, mobile nav, scroll animations |
 | `sitemap.xml` / `robots.txt` | SEO — sitemap and crawler rules |
 | `CNAME` | Custom domain for GitHub Pages |
+| `assets/` | Brand logo (icon, lockup, wordmark), favicons and social share image |
 
 The homepage also includes `ProfessionalService` and `FAQPage` JSON-LD structured data for search engines.
 
