@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adding AI to an App Without the Hype | Ryza Dev</title>
+  <meta name="description" content="What actually matters when LLM features have to work for real users — the service seam, fallbacks, cost and evaluation." />
+  <meta name="keywords" content="AI integration, LLM, RAG, OpenAI, Gemini, app development, Ryza Dev" />
+  <meta name="theme-color" content="#0b0e14" />
+  <meta name="author" content="Ryza Dev" />
+  <meta property="og:title" content="Adding AI to an App Without the Hype" />
+  <meta property="og:description" content="The service seam, fallbacks, cost and evaluation for production AI features." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://ryzadev.com/blog/ai-integration-without-hype.html" />
+  <link rel="canonical" href="https://ryzadev.com/blog/ai-integration-without-hype.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="blog.css" />
+  <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Adding AI to an App Without the Hype",
+    "author": { "@type": "Organization", "name": "Ryza Dev" },
+    "publisher": { "@type": "Organization", "name": "Ryza Dev", "url": "https://ryzadev.com" },
+    "datePublished": "2026-02-09",
+    "mainEntityOfPage": "https://ryzadev.com/blog/ai-integration-without-hype.html",
+    "description": "The service seam, fallbacks, cost and evaluation for production AI features."
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Ryza Dev home">
+        <img class="brand-logo" src="../assets/logo-lockup.png" alt="Ryza Dev" width="176" height="19" />
+      </a>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="../index.html#services">Services</a>
+        <a href="../index.html#work">Our Apps</a>
+        <a href="../work.html">Case Studies</a>
+        <a href="index.html">Blog</a>
+        <a href="../index.html#contact" class="nav-cta">Hire Us</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-wrap">
+      <nav class="breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="index.html">Blog</a><span>/</span> AI</nav>
+      <header class="article-head">
+        <h1>Adding AI to an App Without the Hype</h1>
+        <div class="article-meta"><span>Ryza Dev</span><span>·</span><span>Feb 9, 2026</span><span>·</span><span>7 min read</span></div>
+      </header>
+
+      <div class="article-body">
+        <p>An AI feature is easy to demo and hard to ship. The demo hides latency, cost and failure — the three things that decide whether the feature survives contact with real users. This is how we build AI features that keep working.</p>
+
+        <h2>Design the feature as a service, not a scattered call</h2>
+        <p>The most common mistake is calling the model directly from UI code. Instead, wrap all model access behind a single service layer. That one seam owns the prompt, the retries, the caching, the timeouts and the error surface. It gives you one place to add streaming, one place to add a fallback, and it makes the behaviour testable without a UI.</p>
+        <pre><code>class AiService {
+  async complete(input) {
+    try {
+      return await withTimeout(model.call(input), 8000);
+    } catch (e) {
+      return fallback(input); // never block the user
+    }
+  }
+}</code></pre>
+
+        <h2>Build the fallback first</h2>
+        <p>Models go down, rate limits hit, networks drop. If the app is unusable when the model is unavailable, you built a demo. We build and ship the non-AI path first, then treat AI as the enhancement. Users forgive a good fallback; they don't forgive a frozen spinner.</p>
+        <div class="callout">
+          <p><strong>Test:</strong> turn the AI off completely. If the app still works, you're ready to depend on it.</p>
+        </div>
+
+        <h2>Control cost with hybrid routing</h2>
+        <p>Not every task needs a large model. We route cheap, repetitive tasks (classification, validation, simple intent) to a small on-device or cheap cloud model, and call the large model only when the task genuinely needs it. This cuts cost dramatically and makes most interactions instant. We also cache aggressively — identical prompts should not cost twice.</p>
+
+        <h2>Measure quality like an engineer</h2>
+        <p>"It looked good when I tried it" is not evaluation. We build a small golden set of real inputs with known-good outputs — including the ugly cases: ambiguous inputs, no-answer questions and adversarial prompts. Then we track accuracy, hallucination rate and latency on every change. RAG systems get their retrieval recall and answer faithfulness measured separately, because when an answer is wrong you need to know instantly whether it's retrieval or generation.</p>
+
+        <h2>Guardrails for anything that leaves the device</h2>
+        <p>If the AI output goes to a customer, a document or a database, it needs guardrails: schema validation, refusal when confidence is low, and moderation on generative output. And on the security side, never let untrusted content trigger tool calls directly — prompt injection is a real attack. Run tools with least privilege and confirm anything destructive.</p>
+
+        <h2>Watch it in production</h2>
+        <p>Before launch we instrument the AI path specifically: success rate, latency distribution, fallback frequency and cost per active user. Without these numbers, tuning is guessing. With them, it's engineering. When latency spikes or cost creeps, you see it before your users do.</p>
+
+        <h2>The honest summary</h2>
+        <p>Good AI features are mostly ordinary software engineering: a clean service seam, a reliable fallback, cost control, honest measurement and guardrails. The model is the easy part. Everything around it is what makes the feature production-grade — and it's exactly the work that separates a demo from a product.</p>
+      </div>
+
+      <div class="article-cta">
+        <h3>Need AI in your product?</h3>
+        <p>We add LLM features that stay reliable and cost-controlled in production.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="../index.html#contact">Start a Project</a>
+          <a class="btn btn-ghost" href="../services/ai-app-development.html">AI services</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="../assets/logo-lockup.png" alt="Ryza Dev" width="176" height="19" />
+        <p>Android • AI • Web • Cloud • R&amp;D</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:im.nmzar@gmail.com">im.nmzar@gmail.com</a>
+        <a href="https://www.linkedin.com/company/ryza-dev/" target="_blank" rel="noopener me">LinkedIn</a>
+        <a href="https://www.fiverr.com/nmzaar" target="_blank" rel="noopener me">Fiverr</a>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>© <span id="year"></span> Ryza Dev. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
