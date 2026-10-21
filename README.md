@@ -23,7 +23,8 @@ The homepage also includes `ProfessionalService` (with credentials) and `FAQPage
 
 ## Contact details
 
-- Email: `im.nmzar@gmail.com`
+- Email: `hello@ryzadev.com`
+- Support: `support@ryzadev.com`
 - Phone: `+880 1622 559988`
 - WhatsApp: `+1 561 865 2213`
 

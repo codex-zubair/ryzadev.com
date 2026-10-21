@@ -335,7 +335,7 @@ a.card:hover h3::after { opacity: 1; }
 .about-text { color: var(--muted); font-size: 1.02rem; margin-bottom: 18px; }
 
 /* ---------- Contact ---------- */
-.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .contact-item {
   background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 22px; display: flex; flex-direction: column; gap: 6px;
@@ -343,7 +343,7 @@ a.card:hover h3::after { opacity: 1; }
 }
 .contact-item:hover { transform: translateY(-4px); border-color: rgba(43, 130, 247, 0.55); background: var(--card-hover); }
 .contact-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-weight: 600; }
-.contact-value { font-size: 1rem; font-weight: 600; color: var(--text); word-break: break-word; }
+.contact-value { font-size: 1rem; font-weight: 600; color: var(--text); overflow-wrap: anywhere; word-break: normal; }
 .contact-actions { margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* ---------- Footer ---------- */
