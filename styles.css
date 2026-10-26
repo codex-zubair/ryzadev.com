@@ -360,6 +360,22 @@ a.card:hover h3::after { opacity: 1; }
 .copyright { margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--border); }
 .copyright p { font-size: 0.84rem; color: var(--muted); }
 .footer-seo { margin-top: 8px; font-size: 0.78rem; color: var(--muted); opacity: 0.75; max-width: 90ch; }
+.footer-legal { margin-top: 8px; font-size: 0.78rem; color: var(--muted); line-height: 1.7; }
+.footer-legal a { color: var(--accent-2); text-decoration: none; }
+.footer-legal a:hover { text-decoration: underline; }
+
+/* ---------- Legal pages ---------- */
+.legal-body { color: var(--muted); font-size: 1rem; }
+.legal-body h2 { color: var(--text); font-size: 1.15rem; font-weight: 700; margin: 34px 0 12px; letter-spacing: -0.01em; }
+.legal-body h3 { color: var(--text); font-size: 1rem; font-weight: 700; margin: 22px 0 8px; }
+.legal-body p { margin-bottom: 14px; }
+.legal-body ul { margin: 0 0 16px 20px; }
+.legal-body li { margin-bottom: 6px; }
+.legal-body a { color: var(--accent-2); text-decoration: underline; text-underline-offset: 3px; }
+.legal-updated { font-size: 0.82rem; color: var(--muted); opacity: 0.8; margin-bottom: 26px; }
+.legal-table { width: 100%; border-collapse: collapse; margin: 18px 0 22px; font-size: 0.92rem; }
+.legal-table th, .legal-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.legal-table th { color: var(--text); font-weight: 600; width: 34%; }
 
 /* ---------- Case studies ---------- */
 .hero-sub { padding: 72px 0 56px; }

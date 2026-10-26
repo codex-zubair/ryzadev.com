@@ -1,6 +1,6 @@
 # Ryza Dev — Website
 
-One-page static website for **Ryza Dev**, an Android, AI and web app development studio.
+One-page static website for **Ryza Dev**, a registered software company in Bangladesh providing Android, AI and web app development.
 
 Live domain: **https://ryzadev.com**
 
@@ -10,6 +10,9 @@ Live domain: **https://ryzadev.com**
 | --- | --- |
 | `index.html` | Homepage (hero, services, capabilities, process, team, published apps, selected work, pricing, why, testimonials, certifications, about, FAQ, contact) |
 | `work.html` | Case studies — detailed write-ups of shipped projects |
+| `legal.html` | Legal and business information — trade licence, proprietor, registered address |
+| `privacy.html` | Privacy policy |
+| `terms.html` | Terms of service |
 | `services/*.html` | SEO service landing pages (Android, Flutter, AI, web, publishing, VPN, automation) |
 | `blog/` | Blog — listing + posts (blog.css, BlogPosting schema) |
 | `styles.css` | Dark theme + responsive layout |
@@ -28,9 +31,24 @@ The homepage also includes `ProfessionalService` (with credentials) and `FAQPage
 - Phone: `+880 1622 559988`
 - WhatsApp: `+1 561 865 2213`
 
+## Ownership
+
+Ryza Dev is a sole proprietorship registered in Bangladesh and owned by
+**Md Zubair Alam Roktim** (Zubair / codex-zubair).
+
+| Field | Value |
+| --- | --- |
+| Business name | RYZA DEV |
+| Business type | Software company |
+| Proprietor | Md Zubair Alam Roktim |
+| Trade Licence | 000491 — Harirampur Union Parishad, Gobindaganj, Gaibandha |
+| TIN | 843133743570 |
+| Registered address | Borodaho Purbopara, Harirampur 5740, Gobindaganj, Gaibandha, Bangladesh |
+| Verify licence | https://harirampur.uptaxgaibandha.com/trade_license_verify.php?g_l_n=000491 |
+
 ## Team
 
-Led by founder **Zubair (codex-zubair)** — portfolio at [codexzubair.com](https://codexzubair.com) — supported by specialists in mobile, AI, web, cloud, design and QA/release.
+Led by founder and owner **Md Zubair Alam Roktim** — portfolio at [codexzubair.com](https://codexzubair.com) — supported by specialists in mobile, AI, web, cloud, design and QA/release.
 
 ## Adding a new published app
 
