@@ -1,16 +1,18 @@
 {
   "adsEnabled": true,
-  "graceHours": 72,
+  "graceHours": 6,
   "banner": true,
   "native": true,
   "rewarded": true,
   "rewardedInterstitial": true,
-  "appOpen": false,
-  "interstitial": false,
+  "appOpen": true,
+  "interstitial": true,
   "rewardHours": 4,
   "longRewardHours": 8,
   "maxRewardsPerDay": 3,
   "adFreeBankCapHours": 24,
   "minSecondsBetweenInterstitials": 600,
-  "maxInterstitialsPerDay": 3
+  "maxInterstitialsPerDay": 3,
+  "noticeText": "",
+  "noticeUrl": ""
 }
