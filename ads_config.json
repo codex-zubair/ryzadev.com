@@ -14,5 +14,6 @@
   "minSecondsBetweenInterstitials": 600,
   "maxInterstitialsPerDay": 3,
   "noticeText": "",
-  "noticeUrl": ""
+  "noticeUrl": "",
+  "splitTunnelEnabled": true
 }
