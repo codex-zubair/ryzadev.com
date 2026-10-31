@@ -377,36 +377,6 @@ a.card:hover h3::after { opacity: 1; }
 .legal-table th, .legal-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
 .legal-table th { color: var(--text); font-weight: 600; width: 34%; }
 
-/* ---------- Valuation / investors ---------- */
-.valuation-highlight {
-  display: grid; grid-template-columns: 1.15fr 1fr; gap: 26px; align-items: stretch;
-  background: linear-gradient(120deg, rgba(43, 130, 247, 0.16), rgba(91, 168, 255, 0.05));
-  border: 1px solid rgba(43, 130, 247, 0.4); border-radius: 20px; padding: 34px 32px;
-}
-.val-main { display: flex; flex-direction: column; justify-content: center; gap: 10px; }
-.val-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: var(--accent-2); }
-.val-figure { font-size: clamp(1.9rem, 4.4vw, 2.8rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
-.val-figure em { font-style: normal; font-size: 0.42em; font-weight: 700; color: var(--muted); letter-spacing: 0.08em; }
-.val-range { font-size: 0.88rem; color: var(--muted); }
-.val-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-.val-stat {
-  background: rgba(11, 14, 20, 0.55); border: 1px solid var(--border);
-  border-radius: var(--radius-sm); padding: 16px 16px;
-}
-.val-stat strong { display: block; font-size: 1.2rem; font-weight: 800; color: var(--text); letter-spacing: -0.02em; }
-.val-stat span { font-size: 0.78rem; color: var(--muted); }
-.legal-body code, .article-body code {
-  font-family: "JetBrains Mono", monospace; font-size: 0.86em;
-  background: rgba(255, 255, 255, 0.07); padding: 2px 6px; border-radius: 6px; color: #c3e88d;
-  overflow-wrap: anywhere;
-}
-.callout {
-  background: linear-gradient(120deg, rgba(43, 130, 247, 0.10), rgba(91, 168, 255, 0.06));
-  border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; margin: 0 0 24px;
-}
-.callout p { margin-bottom: 0; }
-.callout p + p { margin-top: 10px; }
-
 /* ---------- Case studies ---------- */
 .hero-sub { padding: 72px 0 56px; }
 .hero-sub h1 { font-size: clamp(1.9rem, 5vw, 3rem); }
@@ -474,7 +444,6 @@ a.card:hover h3::after { opacity: 1; }
   .footer-links { align-items: flex-start; }
   .lead-profile { flex-direction: column; gap: 18px; padding: 24px; }
   .work-grid { grid-template-columns: 1fr; }
-  .valuation-highlight { grid-template-columns: 1fr; padding: 26px 22px; }
   .case { padding: 30px 24px; }
   .case-grid { grid-template-columns: 1fr; }
 }

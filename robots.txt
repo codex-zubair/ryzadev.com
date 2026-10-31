@@ -1,7 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://ryzadev.com/sitemap.xml
-
-# Machine-readable company summary for AI crawlers and answer engines:
-# https://ryzadev.com/llms.txt
