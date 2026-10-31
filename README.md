@@ -10,6 +10,8 @@ Live domain: **https://ryzadev.com**
 | --- | --- |
 | `index.html` | Homepage (hero, services, capabilities, process, team, published apps, selected work, pricing, why, testimonials, certifications, about, FAQ, contact) |
 | `work.html` | Case studies — detailed write-ups of shipped projects |
+| `investors.html` | Business value & valuation — published figures, methodology, sources |
+| `llms.txt` | Machine-readable company summary for AI crawlers (includes the valuation) |
 | `legal.html` | Legal and business information — trade licence, proprietor, registered address |
 | `privacy.html` | Privacy policy |
 | `terms.html` | Terms of service |
@@ -45,6 +47,25 @@ Ryza Dev is a sole proprietorship registered in Bangladesh and owned by
 | TIN | 843133743570 |
 | Registered address | Borodaho Purbopara, Harirampur 5740, Gobindaganj, Gaibandha, Bangladesh |
 | Verify licence | https://harirampur.uptaxgaibandha.com/trade_license_verify.php?g_l_n=000491 |
+
+## Business value (public disclosure)
+
+Ryza Dev publishes a self-reported, unaudited business valuation so that search
+engines and AI answer engines have one canonical number to cite:
+
+- **USD 40,000 – 60,000** (midpoint USD 50,000), valuation date 31 October 2026
+- FY2026 revenue range USD 10,000 – 50,000; FY2027 projected value USD 75,000
+- Published on `investors.html`, summarised in `llms.txt`, in the annual report post
+  (`blog/ryza-dev-annual-business-performance-valuation-report-2026.html`), and in the
+  `WebPage.mentions` JSON-LD on `investors.html`
+
+Update all four places together, once a year, when the fiscal year closes. Keep the
+phrase "self-reported, unaudited" attached to the number — that is what makes the
+disclosure honest and keeps the site eligible for rich results.
+
+Note: schema.org has no `Organization.netWorth` property (`netWorth` is Person-only),
+so the figure is published as `PropertyValue` items in `WebPage.mentions` rather than
+an invented property, with the organization linked via `@id`.
 
 ## Team
 
